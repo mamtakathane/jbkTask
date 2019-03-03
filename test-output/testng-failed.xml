@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Suite1]" parallel="methods">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="url" value="https://www.facebook.com/"/>
+  <test name="Test1(failed)" parallel="methods">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://www.facebook.com/"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.Task.ParallelTestNGTest">
+        <methods>
+          <include name="test2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.Task.ParallelTestNGTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
